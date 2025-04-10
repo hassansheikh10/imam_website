@@ -1,0 +1,91 @@
+body {
+    /* font-family: Arial, sans-serif; */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    /* background: #005a8d; */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.consultation-form {
+    /* background: #ffffff; */
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 100%;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.consultation-form h2 {
+    margin-bottom: 1rem;
+}
+
+.consultation-form label {
+    /* display: block; */
+    margin-bottom: 0.5rem;
+}
+
+.consultation-form select,
+.consultation-form input[type="date"],
+.consultation-form input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.internal-fields {
+    flex: 1 1 48%;
+    /* Allows 2 fields per row */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    min-width: 200px;
+    /* Prevents items from getting too small on small screens */
+}
+
+.form-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.star-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.star-label span {
+    color: red;
+    font-size: 1.1em;
+}
+
+.form-control {
+    height: 40px;
+    font-size: 15px;
+}
+.form-submit-btn {
+    background-color: #ED9803;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 180px; /* Keeps it to content width */
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-submit-btn:hover {
+    background-color: #c67602;
+  }

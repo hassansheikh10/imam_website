@@ -9,15 +9,20 @@
   <!-- 
     - primary meta tags
   -->
-  <title>Doclab - home</title>
-  <meta name="title" content="Doclab - home">
-  <meta name="description" content="This is a madical html template made by codewithsadee">
+  <title>Imam Clinic - Home</title>
+  <meta name="title" content="Imam Clinic  - Home">
 
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/svg+xml">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- 
     - google font link
   -->
@@ -29,18 +34,145 @@
   <!-- 
     - custom css link
   -->
+  <!-- <link rel="stylesheet" href="./assets/css/services.css"> -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!-- 
     - preload images
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+  <!-- <link rel="preload" as="image" href="./assets/images/hero-bg.png"> -->
 
+
+  <style>
+    /* .slider-section {
+      margin-bottom: 200px;
+    } */
+
+    .combo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 20px;
+      /* Add spacing between items */
+    }
+
+    .service-cards {
+      flex: 1;
+      /* Ensure equal space */
+      padding: 12px 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+
+      display: flex;
+      min-width: 300px;
+      min-height: 120px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .service-ct h2 {
+      font-size: 2.8rem;
+    }
+
+    .service-cards p {
+      font-size: 2.2rem;
+    }
+
+    .service-cards i {
+      font-size: 4rem;
+      text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      color: #ff9800;
+      margin-bottom: 5px;
+    }
+
+    .swiper-container {
+      background-color: white;
+      width: 100vw;
+      overflow: hidden;
+      padding: 20px 0;
+      position: relative;
+      /* CHANGE THIS */
+      right: 0;
+    }
+
+    .swiper-container h1 {
+      text-align: center;
+      font-size: 4.2rem;
+      margin-bottom: 50px;
+    }
+
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+      display: flex;
+      align-items: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      width: 120px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .read-more-btn {
+      display: inline-block;
+      background: none;
+      color: white;
+      /* padding: 8px 12px; */
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: underline;
+      transition: 0.3s ease-in-out;
+    }
+
+    .read-more-btn:hover {
+      background: none;
+    }
+
+    @media (max-width: 992px) {
+
+      /* Tablets */
+      .swiper-slide img {
+        width: 80px;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      /* Mobile devices */
+      .swiper-slide img {
+        width: 70px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      /* Small screens */
+      .swiper-slide img {
+        width: 60px;
+      }
+    }
+  </style>
 </head>
 
 <body id="top">
 
+  <div id="cursor"></div>
+  <div id="cursor-image"></div>
   <!-- 
     - #PRELOADER
   -->
@@ -51,8 +183,29 @@
 
 
 
-
-
+  <!-------------Headline------------->
+  <section class="headline" id="headline">
+    <div class="container headline-container">
+      <div class="headline-left">
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+      <div class="headline-right">
+        <div class="headline-info">
+          <span class="open-hours">
+            <i class="fas fa-clock"></i> Open 24 Hours
+          </span>
+          <div class="contact-numbers">
+            <p><i class="fas fa-phone-alt"></i> 021-38704281-84</p>
+            <!-- <p><i class="fas fa-phone-alt"></i> +1 234 567 891</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- 
     - #HEADER
   -->
@@ -60,16 +213,16 @@
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="136" height="46" alt="Doclab home">
+      <a href="/" class="logo">
+        <img src="./assets/images/imam-logo.png" width="136" height="46" alt="Doclab home">
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="136" height="46" alt="Doclab home">
+          <a href="/" class="logo">
+            <img src="./assets/images/imam-logo.png" width="136" height="46" alt="Doclab home">
           </a>
 
           <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
@@ -81,23 +234,89 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Home</a>
+            <a href="/" class="navbar-link title-md">Home</a>
+          </li>
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md">About ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./about-us.html">About Us</a></li>
+              <li><a href="#">Mission & Vision</a></li>
+              <li><a href="./management.html">Management</a></li>
+              <li><a href="./executive-management.html">Executive Management</a></li>
+              <li><a href="#">Future Projects</a></li>
+              <li><a href="#">Patient Rights</a></li>
+            </ul>
+          </li>
+
+          <!-- Doctors Menu with Dropdown -->
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md">Doctors ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./doctors.html">OPD</a></li>
+              <li><a href="./online-doctors.html">Tele OPD</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md" id="services-link">Specialities ▾</a>
+            <ul class="dropdown-menu" id="specialties-dropdown">
+              <li><a href="./speciality.html">Nutritionist</a></li>
+              <li><a href="#">Neurologist</a></li>
+              <li><a href="#">Neuro Surgeon</a></li>
+              <li><a href="#">Rheumatologist</a></li>
+              <li><a href="#">Infectious Diseases</a></li>
+              <li><a href="#">Nephrologist</a></li>
+              <li><a href="#">Cardiologist</a></li>
+              <li><a href="#">Endocrinologist</a></li>
+              <li><a href="#">Diabetologist</a></li>
+              <li><a href="#">Urologist</a></li>
+              <li><a href="#">Maxillofacial Surgeon</a></li>
+              <li><a href="#">Ophthalmologist</a></li>
+              <li><a href="#">Gastroenterologist</a></li>
+              <li><a href="#">Psychiatrist</a></li>
+              <li><a href="#">Clinical Psychologist</a></li>
+              <li><a href="#">Reconstructive Surgeon</a></li>
+              <li><a href="#">Hematologist</a></li>
+              <li><a href="#">Pain Management Clinic</a></li>
+              <li><a href="#">Speech Therapist</a></li>
+              <li><a href="#">Physiotherapist</a></li>
+              <li><a href="#">Vaccination Centre</a></li>
+            </ul>
+          </li>
+
+          <!-- Services Menu with Multi-Column Dropdown (Appears on Hover) -->
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md" id="services-link">Services ▾</a>
+            <ul class="dropdown-menu" id="services-dropdown">
+              <li><a href="./services.html">CT Scan</a></li>
+              <li><a href="#">Inpatient Services</a></li>
+              <li><a href="#">Outpatient Services</a></li>
+              <li><a href="#">Consultant Clinic</a></li>
+              <li><a href="#">ICU Facility</a></li>
+              <li><a href="#">Neonatal Intensive Care Unit</a></li>
+              <li><a href="#">Emergency Services</a></li>
+              <li><a href="#">Clinical Laboratory</a></li>
+              <li><a href="#">Radiology</a></li>
+              <li><a href="#">Procedural Room Services</a></li>
+              <li><a href="#">Dialysis Unit</a></li>
+              <li><a href="#">Vaccination Centre</a></li>
+              <li><a href="#">Trauma & Orthopedic Care</a></li>
+              <li><a href="#">Pharmacy Services</a></li>
+              <li><a href="#">Physiotherapy Services</a></li>
+              <li><a href="#">Dental Clinic</a></li>
+            </ul>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Doctors</a>
+            <a href="./careers.html" class="navbar-link title-md">Careers</a>
           </li>
 
-          <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Services</a>
-          </li>
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md">Contact ▾</a>
+            <ul class="dropdown-menu" id="contacts-dropdown">
+              <li><a href="./contact-us.html">Contact Us</a></li>
+              <li><a href="./feedback.html">Feedback & Complaint</a></li>
 
-          <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Blog</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Contact</a>
+            </ul>
           </li>
 
         </ul>
@@ -142,53 +361,66 @@
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-      <a href="#" class="btn has-before title-md">Make Appointment</a>
+      <a href="./appointment.html" class="btn has-before title-md">Make Appointment</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
     </div>
   </header>
 
+  <div id="homepagePopup" class="popup-overlay">
+    <div class="popup-box">
+      <span class="close-popup">&times;</span>
+      <div class="popup-image">
+        <img src="./assets/images/for banner.jpg" alt="Welcome" />
+      </div>
+      <div class="popup-content">
+        <h2>Welcome to Imam Clinic</h2>
+        <p>Providing trusted healthcare solutions with a team of dedicated professionals.</p>
+        <button class="popup-btn">Explore Services</button>
+      </div>
+    </div>
+  </div>
 
 
-
-
+  <div class="sidebar-tabs">
+    <a href="./assets/pdf/Ramadan-OPD-Schedule-IMAM.pdf" target="_blank" class="tab" data-text="OPD Schedule"><i
+        class="fas fa-calendar-alt"></i></a>
+    <a href="./appointment.html" class="tab" data-text="Appointments"><i class="fas fa-user-md"></i></a>
+  </div>
   <main>
     <article>
+      <section class="section hero" aria-label="home">
+        <video autoplay loop muted playsinline class="hero-video" id="bg-video">
+          <source src="./assets/video/Web Animated Video Final.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
 
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="home">
-        <div class="container">
+        <div class="container" style="opacity: 1; position: relative; z-index: 2;">
 
           <div class="hero-content">
 
-            <p class="hero-subtitle has-before" data-reveal="left">Welcome To Doclab</p>
+            <p class="hero-subtitle has-before" data-reveal="left">Welcome To Imam Clinic</p>
 
             <h1 class="headline-lg hero-title" data-reveal="left">
-              Find Nearest <br>
+              Find Your <br>
               Doctor.
             </h1>
 
             <div class="hero-card" data-reveal="left">
 
               <p class="title-lg card-text">
-                Search doctors. clinics. hospitals. etc.
+                Search doctors. specialties.
               </p>
 
               <div class="wrapper">
 
                 <div class="input-wrapper title-lg">
-                  <input type="text" name="location" placeholder="Locations" class="input-field">
-
-                  <ion-icon name="location"></ion-icon>
+                  <input type="text" name="search" placeholder="Search" class="input-field">
                 </div>
 
                 <button class="btn has-before">
                   <ion-icon name="search"></ion-icon>
-
                   <span class="span title-md">Find Now</span>
                 </button>
 
@@ -198,129 +430,34 @@
 
           </div>
 
-          <figure class="hero-banner" data-reveal="right">
-            <img src="./assets/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner"
-              class="w-100">
-          </figure>
+        </div>
+      </section>
 
+      <section class="service slider-section" aria-label="service">
+        <div class="swiper-container">
+          <h1 class="headline-md" style="color: #333333;">Accepted Panels</h1>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./assets/images/adamji.jpg" alt="Company 1"></div>
+            <div class="swiper-slide"><img src="./assets/images/Alfalah.jpg" alt="Company 2"></div>
+            <div class="swiper-slide"><img src="./assets/images/Allianz-EFU.jpg" alt="Company 3"></div>
+            <div class="swiper-slide"><img src="./assets/images/asia-care.jpg" alt="Company 4"></div>
+            <div class="swiper-slide"><img src="./assets/images/asia-insurance.jpg" alt="Company 6"></div>
+            <div class="swiper-slide"><img src="./assets/images/askari-general.jpg" alt="Company 7"></div>
+            <div class="swiper-slide"><img src="./assets/images/CSI.jpg" alt="Company 8"></div>
+          </div>
         </div>
       </section>
 
 
+      <section class="section about glowing-shapes" aria-labelledby="about-label">
+        <div class="sucking-circle left-1"></div>
+        <div class="dots-group left-1"></div>
 
+        <div class="sucking-circle left-2"></div>
+        <div class="dots-group left-2"></div>
 
-
-      <!-- 
-        - #SERVICE
-      -->
-
-      <section class="service" aria-label="service">
-        <div class="container">
-
-          <ul class="service-list">
-
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="#">Psychiatry</a>
-                </h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                </p>
-
-                <button class="btn-circle" aria-label="read more about psychiatry">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="#">Gynecology</a>
-                </h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                </p>
-
-                <button class="btn-circle" aria-label="read more about Gynecology">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-3.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="#">Pulmonology</a>
-                </h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                </p>
-
-                <button class="btn-circle" aria-label="read more about Pulmonology">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="#">Orthopedics</a>
-                </h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                </p>
-
-                <button class="btn-circle" aria-label="read more about Orthopedics">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #ABOUT
-      -->
-
-      <section class="section about" aria-labelledby="about-label">
+        <div class="sucking-circle left-3"></div>
+        <div class="dots-group left-3"></div>
         <div class="container">
 
           <div class="about-content">
@@ -360,25 +497,25 @@
               <ul class="about-list">
 
                 <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <i class="far fa-check-circle"></i>
 
                   <span class="span">Sonsectetur adipisicing elit</span>
                 </li>
 
                 <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <i class="far fa-check-circle"></i>
 
                   <span class="span">Exercitation ullamco laboris</span>
                 </li>
 
                 <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <i class="far fa-check-circle"></i>
 
                   <span class="span">Eiusmod tempor incididunt</span>
                 </li>
 
                 <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
+                  <i class="far fa-check-circle"></i>
 
                   <span class="span">Aolore magna aliqua</span>
                 </li>
@@ -389,260 +526,654 @@
 
           </div>
 
+
+
           <figure class="about-banner" data-reveal="right">
             <img src="./assets/images/about-banner.png" width="554" height="678" loading="lazy" alt="about banner"
               class="w-100">
           </figure>
 
+
+
+
         </div>
+        <div class="sucking-circle right-1"></div>
+        <div class="dots-group right-1"></div>
+
+        <div class="sucking-circle right-2"></div>
+        <div class="dots-group right-2"></div>
+
+        <div class="sucking-circle right-3"></div>
+        <div class="dots-group right-3"></div>
       </section>
 
 
 
 
+      <section
+        style="background-image: url(./assets/images/front.png); background-size: cover; background-position: center;  background-repeat: no-repeat; min-height: 100vh; width: 100%;">
 
-      <!-- 
-        - #LISTING
-      -->
+        <section class="section listing" aria-labelledby="listing-label">
+          <div class="container">
 
-      <section class="section listing" aria-labelledby="listing-label">
-        <div class="container">
+            <ul class="grid-list">
 
-          <ul class="grid-list">
+              <li>
+                <p class="section-subtitle title-lg" id="listing-label" data-reveal="left">Doctors Listig</p>
 
-            <li>
-              <p class="section-subtitle title-lg" id="listing-label" data-reveal="left">Doctors Listig</p>
+                <h2 class="headline-md" data-reveal="left">Browse by specialist</h2>
+              </li>
+              <li>
+                <a href="speciality.html" class="listing-card-link">
 
-              <h2 class="headline-md" data-reveal="left">Browse by specialist</h2>
-            </li>
+                  <div class="listing-card" data-reveal="bottom">
 
-            <li>
-              <div class="listing-card" data-reveal="bottom">
+                    <div class="card-icon">
+                      <img src="./assets/icon/Nutritionist.png" width="71" height="71" loading="lazy" alt="icon">
+                    </div>
 
-                <div class="card-icon">
-                  <img src="./assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
+                    <div>
+                      <h3 class="headline-sm card-title speciality">Nutritionist</h3>
+
+                      <p class="card-text">Diet Expert</p> <!-- Nutritionist -->
+                    </div>
+
+                  </div>
+                </a>
+
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Anesthesoilogist.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Anesthesiologist</h3>
+                    <p class="card-text">Pain management</p>
+                  </div>
                 </div>
+              </li>
 
-                <div>
-                  <h3 class="headline-sm card-title">Psychiatry</h3>
-
-                  <p class="card-text">Porta velit</p>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Cardiology.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Cardiology</h3>
+                    <p class="card-text">Heart diseases</p>
+                  </div>
                 </div>
+              </li>
 
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Clinical Psychologist.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Psychologist</h3>
+                    <p class="card-text">Mental health</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Dentist.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Dentist</h3>
+                    <p class="card-text">Oral care</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Dermatology.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Dermatology</h3>
+                    <p class="card-text">Skin health</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Diabetologist.png" width="41" height="41" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Diabetologist</h3>
+                    <p class="card-text">Diabetes care</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Endocrinologist.png" width="51" height="51" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Endocrinologist</h3>
+                    <p class="card-text">Hormone disorders</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/ENT.png" width="51" height="51" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">ENT Surgeon</h3>
+                    <p class="card-text">Ear, Nose</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Gastroenterology.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Gastroenterology</h3>
+                    <p class="card-text">Digestive system</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/General Physician.png" width="51" height="51" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">General Physician</h3>
+                    <p class="card-text">General health</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/General Surgeon.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">General Surgeon</h3>
+                    <p class="card-text">Surgical procedures</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Gynecology.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Gynecology</h3>
+                    <p class="card-text">Women's health</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Haemtology.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Hematology</h3>
+                    <p class="card-text">Blood disorders</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Infectious Diseases.png" width="51" height="51" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Infectious Diseases</h3>
+                    <p class="card-text">Disease control</p>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+                  <div class="card-icon">
+                    <img src="./assets/icon/Liver Transplant.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Liver Transplant</h3>
+                    <p class="card-text">Liver surgery</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Nephrology.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Nephrology</h3>
+
+                    <p class="card-text">Kidney Specialist</p> <!-- Nephrology -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Neurology.png" width="51" height="51" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Neurology</h3>
+
+                    <p class="card-text">Brain Specialist</p> <!-- Neurology -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Neurosurgery.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Neurosurgery</h3>
+
+                    <p class="card-text">Brain Surgeon</p> <!-- Neurosurgery -->
+                  </div>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Oncology.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Oncology</h3>
+
+                    <p class="card-text">Cancer Specialist</p> <!-- Oncology -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Ophthalmologist.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Ophthalmologist</h3>
+
+                    <p class="card-text">Eye Specialist</p> <!-- Ophthalmologist -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Orthpaedic.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Orthpaedic</h3>
+
+                    <p class="card-text">Bone Specialist</p> <!-- Orthopaedic -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Pediatrcian.png" width="51" height="51" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Pediatrcian</h3>
+
+                    <p class="card-text">Child Doctor</p> <!-- Pediatrician -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Physiotherapy.png" width="51" height="51" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Physiotherapy</h3>
+
+                    <p class="card-text">Rehab Therapy</p> <!-- Physiotherapy -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Plastic Surgeon.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Plastic Surgeon</h3>
+
+                    <p class="card-text">Cosmetic Surgeon</p> <!-- Plastic Surgeon -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Psychiatrist.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Psychiatrist</h3>
+
+                    <p class="card-text">Mental Health</p> <!-- Psychiatrist -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Pulmonology.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Pulmonology</h3>
+
+                    <p class="card-text">Lung Specialist</p> <!-- Pulmonology -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Rheumatology.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Rheumatology</h3>
+
+                    <p class="card-text">Joint Specialist</p> <!-- Rheumatology -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Speech Therapy.png" width="61" height="61" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Speech Therapy</h3>
+
+                    <p class="card-text">Speech Expert</p> <!-- Speech Therapy -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Uro GYne.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Uro Gyne</h3>
+
+                    <p class="card-text">Female Health</p> <!-- Uro Gyne -->
+                  </div>
+
+                </div>
+              </li>
+              <li>
+                <div class="listing-card" data-reveal="bottom">
+
+                  <div class="card-icon">
+                    <img src="./assets/icon/Vaccination.png" width="71" height="71" loading="lazy" alt="icon">
+                  </div>
+
+                  <div>
+                    <h3 class="headline-sm card-title speciality">Vaccination</h3>
+
+                    <p class="card-text">Immunization Care</p> <!-- Vaccination -->
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
+        <!-- Bootstrap Modal -->
+        <div class="modal fade" id="doctorModal" tabindex="-1" aria-labelledby="doctorModalLabel" aria-hidden="true">
+          <div class="modal-dialog  modal-lg  modal-dialog-centered"> <!-- Center modal -->
+            <div class="modal-content custom-modal"> <!-- Custom class added -->
+              <div class="modal-header">
+                <h5 class="modal-title"> Neurologist</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 col-12">
+                      <div class="doctor-card">
+                        <span class="doctor-name"> Dr. Ahsan Khan</span>
+                        <span class="doctor-time"> 10:00 AM - 2:00 PM</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div class="doctor-card">
+                        <span class="doctor-name"> Dr. Sara Malik</span>
+                        <span class="doctor-time"> 4:00 PM - 8:00 PM</span>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <div class="doctor-card">
+                        <span class="doctor-name"> Dr. Bilal Ahmed</span>
+                        <span class="doctor-time"> 6:00 PM - 10:00 PM</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Gynecology</h3>
-
-                  <p class="card-text">Mattis augue</p>
-                </div>
-
               </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Pulmonology</h3>
-
-                  <p class="card-text">Mauris laoreet</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-5.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Orthopedics</h3>
-
-                  <p class="card-text">Convallis vulputate</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-6.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Pediatrics</h3>
-
-                  <p class="card-text">Posuere maecenas</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-7.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Osteology</h3>
-
-                  <p class="card-text">Nisi nullam</p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
+            </div>
+          </div>
         </div>
+
+        <section class="section blog" aria-labelledby="blog-label">
+          <div class="container">
+
+            <p class="section-subtitle title-lg text-center" id="blog-label" data-reveal="bottom">
+              News & Article
+            </p>
+
+            <h2 class="section-title headline-md text-center" data-reveal="bottom">Latest Articles</h2>
+
+            <ul class="grid-list">
+
+              <li>
+                <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                  <div class="meta-wrapper">
+
+                    <div class="card-meta">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <span class="span">By Admin</span>
+                    </div>
+
+                    <div class="card-meta">
+                      <ion-icon name="folder-outline"></ion-icon>
+
+                      <span class="span">Specialist</span>
+                    </div>
+
+                  </div>
+
+                  <h3 class="headline-sm card-title">Could intermittent fasting reduce breast cancer</h3>
+
+                  <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat
+                  </p>
+
+                  <a href="#" class="btn-text title-lg">Read More</a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                  <div class="meta-wrapper">
+
+                    <div class="card-meta">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <span class="span">By Admin</span>
+                    </div>
+
+                    <div class="card-meta">
+                      <ion-icon name="folder-outline"></ion-icon>
+
+                      <span class="span">Specialist</span>
+                    </div>
+
+                  </div>
+
+                  <h3 class="headline-sm card-title">Give children more autonomy during the pandemic</h3>
+
+                  <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat
+                  </p>
+
+                  <a href="#" class="btn-text title-lg">Read More</a>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                  <div class="meta-wrapper">
+
+                    <div class="card-meta">
+                      <ion-icon name="person-outline"></ion-icon>
+
+                      <span class="span">By Admin</span>
+                    </div>
+
+                    <div class="card-meta">
+                      <ion-icon name="folder-outline"></ion-icon>
+
+                      <span class="span">Specialist</span>
+                    </div>
+
+                  </div>
+
+                  <h3 class="headline-sm card-title">How do binge eating and drinking impact the liver?</h3>
+
+                  <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat
+                  </p>
+
+                  <a href="#" class="btn-text title-lg">Read More</a>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </section>
       </section>
 
-
-
-
-
-      <!-- 
-        - #BLOG
-      -->
-
-      <section class="section blog" aria-labelledby="blog-label">
-        <div class="container">
-
-          <p class="section-subtitle title-lg text-center" id="blog-label" data-reveal="bottom">
-            News & Article
-          </p>
-
-          <h2 class="section-title headline-md text-center" data-reveal="bottom">Latest Articles</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
-
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
+      <section class="impact-section">
+        <div class="our-impact"> <!-- Add this wrapper div -->
+          <div class="impact-container container">
+            <h2 class="impact-title">Our Impact</h2>
+            <div class="impact-content">
+              <div class="impact-stats">
+                <div class="stat">
+                  <h3>Total Years of Serving</h3>
+                  <div class="counter" id="years-counter">0</div>
                 </div>
-
-                <h3 class="headline-sm card-title">Could intermittent fasting reduce breast cancer</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat
-                </p>
-
-                <a href="#" class="btn-text title-lg">Read More</a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
-
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
+                <div class="stat">
+                  <h3>No of Patients Served</h3>
+                  <div class="counter" id="patients-counter">0</div>
                 </div>
-
-                <h3 class="headline-sm card-title">Give children more autonomy during the pandemic</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat
-                </p>
-
-                <a href="#" class="btn-text title-lg">Read More</a>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
-
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
+                <div class="stat">
+                  <h3>No of Consultants</h3>
+                  <div class="counter" id="consultants-counter">0</div>
                 </div>
-
-                <h3 class="headline-sm card-title">How do binge eating and drinking impact the liver?</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat
-                </p>
-
-                <a href="#" class="btn-text title-lg">Read More</a>
-
+                <div class="stat">
+                  <h3>No of Beds</h3>
+                  <div class="counter" id="beds-counter">0</div>
+                </div>
               </div>
-            </li>
-
-          </ul>
-
+            </div>
+          </div>
         </div>
       </section>
 
     </article>
   </main>
-
 
 
 
@@ -655,104 +1186,36 @@
     <div class="container">
 
       <div class="section footer-top">
-
-        <div class="footer-brand" data-reveal="bottom">
-
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="136" height="46" loading="lazy" alt="Doclab home">
-          </a>
-
-          <ul class="contact-list has-after">
-
-            <li class="contact-item">
-
-              <div class="item-icon">
-                <ion-icon name="mail-open-outline"></ion-icon>
-              </div>
-
-              <div>
-                <p>
-                  Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@&shy;website.com</a>
-                </p>
-
-                <p>
-                  Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a>
-                </p>
-              </div>
-
-            </li>
-
-            <li class="contact-item">
-
-              <div class="item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-
-              <div>
-                <p>
-                  Office Telephone : <a href="tel:0029129102320" class="contact-link">0029129102320</a>
-                </p>
-
-                <p>
-                  Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a>
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
+        <div class="container footer-brand combo " data-reveal="bottom">
+          <div class="service-cards " data-reveal="left">
+            <i class="fas fa-phone-alt"></i>
+            <p>Phone</p>
+            <h3>021-38704281-84 </h3>
+          </div>
+          <div class="service-cards " data-reveal="bottom">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Location</p>
+            <h3> 5 Star Round About, ST-5, Block-I, North Nazimabad، Karachi 74700</h3>
+          </div>
+          <div class="service-cards " data-reveal="right">
+            <i class="fas fa-envelope"></i>
+            <p>Email</p>
+            <h3> info@imamclinic.com</h3>
+          </div>
         </div>
 
         <div class="footer-list" data-reveal="bottom">
 
+          <img src="./assets/images/imam-logo-white-text.png" width="62%" height="80px">
+
+        </div>
+        <ul class="footer-list" data-reveal="bottom">
           <p class="headline-sm footer-list-title">About Us</p>
 
           <p class="text">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+            Providing high-quality medical care with advanced technology..<a href="./about-us.html"
+              class="read-more-btn">Read More</a>
           </p>
-
-          <address class="address">
-            <ion-icon name="map-outline"></ion-icon>
-
-            <span class="text">
-              2416 Mapleview Drive <br>
-              Tampa, FL 33634
-            </span>
-          </address>
-
-        </div>
-
-        <ul class="footer-list" data-reveal="bottom">
-
-          <li>
-            <p class="headline-sm footer-list-title">Services</p>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Listing</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">How It Works</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">What We Offer</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Latest News</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Contact Us</a>
-          </li>
-
         </ul>
 
         <ul class="footer-list" data-reveal="bottom">
@@ -762,34 +1225,39 @@
           </li>
 
           <li>
-            <a href="#" class="text footer-link">Conditions</a>
+            <a href="./doctors.html" class="text footer-link">Doctors</a>
           </li>
 
           <li>
-            <a href="#" class="text footer-link">Terms of Use</a>
+            <a href="./contact-us.html" class="text footer-link">Contact Us</a>
           </li>
 
           <li>
-            <a href="#" class="text footer-link">Our Services</a>
+            <a href="./careers.html" class="text footer-link">Career</a>
           </li>
 
           <li>
-            <a href="#" class="text footer-link">Join as a Doctor</a>
+            <a href="./appointment.html" class="text footer-link">Appointment</a>
           </li>
-
           <li>
-            <a href="#" class="text footer-link">New Guests List</a>
-          </li>
+            <a href="./assets/pdf/Ramadan-OPD-Schedule-IMAM.pdf" target="_blank" class="text footer-link">OPD
+              Schedule</a>
 
-          <li>
-            <a href="#" class="text footer-link">The Team List</a>
           </li>
+          <!-- 
+                <li>
+                    <a href="#" class="text footer-link">New Guests List</a>
+                </li>
+
+                <li>
+                    <a href="#" class="text footer-link">The Team List</a>
+                </li> -->
 
         </ul>
 
         <div class="footer-list" data-reveal="bottom">
 
-          <p class="headline-sm footer-list-title">Subscribe</p>
+          <p class="headline-sm footer-list-title">Subscription</p>
 
           <form action="" class="footer-form">
             <input type="email" name="email" placeholder="Email" class="input-field title-lg">
@@ -805,51 +1273,29 @@
 
       </div>
 
-      <div class="footer-bottom">
 
-        <p class="text copyright">
-          &copy; Doclab 2022 | All Rights Reserved by codewithsadee
-        </p>
-
-        <ul class="social-list">
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-google"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
 
     </div>
-  </footer>
+    <section class="headline">
+      <div class="container headline-container">
+        <div class="headline-left">
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="headline-right">
+          <div class="headline-info info-footer">
+            <p class="text copyright">
+              &copy; Imam Clinic 2025 | All Rights Reserved by Imam Clinic
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+  </footer>
 
 
 
@@ -857,9 +1303,11 @@
   <!-- 
     - #BACK TO TOP
   -->
-
+  <a href="https://wa.me/11234567890" class="whatsapp-btn" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
+    <i class="fas fa-chevron-up"></i>
   </a>
 
 
@@ -870,12 +1318,75 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 6,
+      spaceBetween: 20,
+      loop: true,
+      speed: 3000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
+      freeMode: true,
+      breakpoints: {
+        1200: { slidesPerView: 6 }, // Large screens
+        992: { slidesPerView: 5 }, // Tablets
+        768: { slidesPerView: 4 }, // Mobile landscape
+        480: { slidesPerView: 3 }  // Small screens
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Close popup when the close button is clicked
+      document.querySelector(".close-popup--btn").addEventListener("click", function () {
+        document.querySelector(".popup-section").classList.add("hide-popup");
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      let video = document.getElementById("bg-video");
+      video.playbackRate = 1.5; // 2x speed
+    });
+  </script>
+
+  <!-- <script>
+    // Listen for the scroll event
+    window.addEventListener('scroll', function () {
+      const swiper = document.querySelector('.swiper-container');
+
+      // Check if the user has scrolled down
+      if (window.scrollY > 0) {
+        swiper.classList.add('swiper-hidden');
+      } else {
+        swiper.classList.remove('swiper-hidden');
+      }
+    });
+  </script> -->
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const headline = document.getElementById('headline');
+      const offset = headline.offsetTop;
+
+      if (window.scrollY > offset) {
+        headline.classList.add('active');
+      } else {
+        headline.classList.remove('active');
+      }
+    });
+  </script>
 
   <!-- 
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

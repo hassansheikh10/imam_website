@@ -1,0 +1,228 @@
+
+.hero-section {
+    background: url('../images/CT-Scan.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    /* margin-top: 80px; */
+    align-items: center;
+    display: flex;
+    height: 43vh;
+}
+.contact-section {
+    background: url('../images/lounge.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    /* margin-top: 80px; */
+    align-items: center;
+    display: flex;
+    height: 80vh;
+}
+.feedback-section {
+    background: url('../images/feedback.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    /* margin-top: 80px; */
+    align-items: center;
+    display: flex;
+    height: 43vh;
+}
+
+
+.about-service{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #e68900;
+}
+
+/* Features Section */
+.features {
+    background: white;
+    padding: 50px 0;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+.feature-box p{
+    margin: 0;
+}
+
+.feature-box {
+    background: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+/* About Section */
+.service {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.about-grid {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about-grid img {
+    width: 40%;
+    border-radius: 8px;
+}
+
+.about-grid ul {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+}
+
+.about-grid ul li {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    font-weight: 400;
+    background: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Appointment Section */
+.appointment {
+    background: url(../images/lounge.jpg) no-repeat center center/cover;
+    color: white;
+    padding: 50px 0;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.appointment-form input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.appointment-form .btn-primary {
+    width: 100%;
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.appointment-form .btn-primary:hover {
+    background: #e68900;
+}
+
+.combo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    /* Add spacing between items */
+}
+
+.service-cards {
+    flex: 1;
+    /* Ensure equal space */
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    display: flex;
+    min-width: 300px;
+    min-height: 120px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.service-ct h2 {
+    font-size: 2.8rem;
+}
+
+.service-cards p {
+    font-size: 2.2rem;
+}
+
+.service-cards i {
+    font-size: 4rem;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ff9800;
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 90%;
+    }
+
+    .about-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-grid img {
+        width: 80%;
+    }
+}

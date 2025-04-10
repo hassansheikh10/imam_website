@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>Imam Clinic - Contact Us</title>
+    <meta name="title" content="Imam Clinic  - Services">
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/svg+xml">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="./assets/css/appointment.css"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/services.css">
+
+    <!-- 
+    - preload images
+  -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+    <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+
+
+    <style>
+        /* Contact Form Styles */
+        .contact-form {
+            background: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .map-container {
+            flex: 0.8;
+            min-width: 180px;
+            height: 420px;
+            background: #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .form {
+            flex: 1.2;
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1.6rem;
+        }
+
+        .form-input:focus {
+            border-color: #ED9803;
+            outline: none;
+        }
+
+        textarea.form-input {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .btn-primary {
+            display: block;
+            width: 100%;
+            background: #ED9803;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <!-- 
+    - #PRELOADER
+  -->
+
+    <div class="preloader" data-preloader>
+        <div class="circle"></div>
+    </div>
+
+
+    <!-------------Headline------------->
+    <section class="headline" id="headline">
+        <div class="container headline-container">
+            <div class="headline-left">
+                <ul class="social-list">
+                    <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="headline-right">
+                <div class="headline-info">
+                    <span class="open-hours">
+                        <i class="fas fa-clock"></i> Open 24 Hours
+                    </span>
+                    <div class="contact-numbers">
+                        <p><i class="fas fa-phone-alt"></i> 021-38704281-84</p>
+                        <!-- <p><i class="fas fa-phone-alt"></i> +1 234 567 891</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 
+    - #HEADER
+  -->
+
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="/" class="logo">
+        <img src="./assets/images/imam-logo.png" width="136" height="46" alt="Doclab home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="/" class="logo">
+            <img src="./assets/images/imam-logo.png" width="136" height="46" alt="Doclab home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="/" class="navbar-link title-md">Home</a>
+          </li>
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md">About ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./about-us.html">About Us</a></li>
+              <li><a href="#">Mission & Vision</a></li>
+              <li><a href="./management.html">Management</a></li>
+              <li><a href="./executive-management.html">Executive Management</a></li>
+              <li><a href="#">Future Projects</a></li>
+              <li><a href="#">Patient Rights</a></li>
+            </ul>
+          </li>
+
+          <!-- Doctors Menu with Dropdown -->
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md">Doctors ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./doctors.html">OPD</a></li>
+              <li><a href="./online-doctors.html">Tele OPD</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md" id="services-link">Specialities ▾</a>
+            <ul class="dropdown-menu" id="specialties-dropdown">
+              <li><a href="./speciality.html">Nutritionist</a></li>
+              <li><a href="#">Neurologist</a></li>
+              <li><a href="#">Neuro Surgeon</a></li>
+              <li><a href="#">Rheumatologist</a></li>
+              <li><a href="#">Infectious Diseases</a></li>
+              <li><a href="#">Nephrologist</a></li>
+              <li><a href="#">Cardiologist</a></li>
+              <li><a href="#">Endocrinologist</a></li>
+              <li><a href="#">Diabetologist</a></li>
+              <li><a href="#">Urologist</a></li>
+              <li><a href="#">Maxillofacial Surgeon</a></li>
+              <li><a href="#">Ophthalmologist</a></li>
+              <li><a href="#">Gastroenterologist</a></li>
+              <li><a href="#">Psychiatrist</a></li>
+              <li><a href="#">Clinical Psychologist</a></li>
+              <li><a href="#">Reconstructive Surgeon</a></li>
+              <li><a href="#">Hematologist</a></li>
+              <li><a href="#">Pain Management Clinic</a></li>
+              <li><a href="#">Speech Therapist</a></li>
+              <li><a href="#">Physiotherapist</a></li>
+              <li><a href="#">Vaccination Centre</a></li>
+            </ul>
+          </li>
+
+          <!-- Services Menu with Multi-Column Dropdown (Appears on Hover) -->
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md" id="services-link">Services ▾</a>
+            <ul class="dropdown-menu" id="services-dropdown">
+              <li><a href="./services.html">CT Scan</a></li>
+              <li><a href="#">Inpatient Services</a></li>
+              <li><a href="#">Outpatient Services</a></li>
+              <li><a href="#">Consultant Clinic</a></li>
+              <li><a href="#">ICU Facility</a></li>
+              <li><a href="#">Neonatal Intensive Care Unit</a></li>
+              <li><a href="#">Emergency Services</a></li>
+              <li><a href="#">Clinical Laboratory</a></li>
+              <li><a href="#">Radiology</a></li>
+              <li><a href="#">Procedural Room Services</a></li>
+              <li><a href="#">Dialysis Unit</a></li>
+              <li><a href="#">Vaccination Centre</a></li>
+              <li><a href="#">Trauma & Orthopedic Care</a></li>
+              <li><a href="#">Pharmacy Services</a></li>
+              <li><a href="#">Physiotherapy Services</a></li>
+              <li><a href="#">Dental Clinic</a></li>
+            </ul>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./careers.html" class="navbar-link title-md">Careers</a>
+          </li>
+
+          <li class="navbar-item dropdown">
+            <a class="navbar-link title-md">Contact ▾</a>
+            <ul class="dropdown-menu" id="contacts-dropdown">
+              <li><a href="./contact-us.html">Contact Us</a></li>
+              <li><a href="./feedback.html">Feedback & Complaint</a></li>
+
+            </ul>
+          </li>
+
+        </ul>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="./appointment.html" class="btn has-before title-md">Make Appointment</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+    <section class="contact-section">
+        <div class="contact-container container">
+            <div class="map-container" data-reveal="left">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14475.698470136333!2d67.0284343150038!3d24.938089884046053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ff03446b38b%3A0x4a6e5f4b5d7c4b4!2sImam%20Clinic!5e0!3m2!1sen!2s!4v1711040000000!5m2!1sen!2s"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <form class="form" data-reveal="right">
+                <input type="text" placeholder="Full Name" class="form-input" required>
+                <input type="email" placeholder="Email Address" class="form-input" required>
+                <input type="tel" placeholder="Phone Number" class="form-input">
+                <textarea placeholder="Your Message" class="form-input" required></textarea>
+                <button type="submit" class="btn has-before title-md">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- <section class="appointment" id="appointment">
+        <div class="container combo">
+            <div class="service-cards" data-reveal="bottom">
+                <i class="fas fa-phone-alt"></i>
+                <p>Phone</p>
+                <h3>021-38704281-84 </h3>
+            </div>
+            <div class="service-cards" data-reveal="bottom">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Location</p>
+                <h3> 5 Star Round About, ST-5, Block-I, North Nazimabad، Karachi 74700</h3>
+            </div>
+            <div class="service-cards" data-reveal="bottom">
+                <i class="fas fa-envelope"></i>
+                <p>Email</p>
+                <h3> info@imamclinic.com</h3>
+            </div>
+        </div>
+    </section> -->
+
+
+    <div class="sidebar-tabs">
+        <a href="./assets/pdf/Ramadan-OPD-Schedule-IMAM.pdf" target="_blank" class="tab" data-text="OPD Schedule"><i
+                class="fas fa-calendar-alt"></i></a>
+        <a href="./appointment.html" class="tab" data-text="Appointments"><i class="fas fa-user-md"></i></a>
+    </div>
+
+    <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+        <div class="container">
+
+            <div class="section footer-top">
+                <div class="container footer-brand combo " data-reveal="bottom">
+                    <div class="service-cards " data-reveal="left">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Phone</p>
+                        <h3>021-38704281-84 </h3>
+                    </div>
+                    <div class="service-cards " data-reveal="bottom">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Location</p>
+                        <h3> 5 Star Round About, ST-5, Block-I, North Nazimabad، Karachi 74700</h3>
+                    </div>
+                    <div class="service-cards " data-reveal="right">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email</p>
+                        <h3> info@imamclinic.com</h3>
+                    </div>
+                </div>
+
+                <div class="footer-list" data-reveal="bottom">
+
+                    <img src="./assets/images/imam-logo-white-text.png" width="62%" height="80px">
+
+                </div>
+                <ul class="footer-list" data-reveal="bottom">
+                    <p class="headline-sm footer-list-title">About Us</p>
+
+                    <p class="text">
+                        Providing high-quality medical care with advanced technology..<a href="./about-us.html"
+                            class="read-more-btn">Read More</a>
+                    </p>
+                </ul>
+
+                <ul class="footer-list" data-reveal="bottom">
+
+                    <li>
+                        <p class="headline-sm footer-list-title">Useful Links</p>
+                    </li>
+
+                    <li>
+                        <a href="./doctors.html" class="text footer-link">Doctors</a>
+                    </li>
+
+                    <li>
+                        <a href="./contact-us.html" class="text footer-link">Contact Us</a>
+                    </li>
+
+                    <li>
+                        <a href="./careers.html" class="text footer-link">Career</a>
+                    </li>
+
+                    <li>
+                        <a href="./appointment.html" class="text footer-link">Appointment</a>
+                    </li>
+                    <li>
+                        <a href="./assets/pdf/Ramadan-OPD-Schedule-IMAM.pdf" target="_blank"
+                            class="text footer-link">OPD Schedule</a>
+                    </li>
+                    <!-- 
+                    <li>
+                        <a href="#" class="text footer-link">New Guests List</a>
+                    </li>
+    
+                    <li>
+                        <a href="#" class="text footer-link">The Team List</a>
+                    </li> -->
+
+                </ul>
+
+                <div class="footer-list" data-reveal="bottom">
+
+                    <p class="headline-sm footer-list-title">Subscription</p>
+
+                    <form action="" class="footer-form">
+                        <input type="email" name="email" placeholder="Email" class="input-field title-lg">
+
+                        <button type="submit" class="btn has-before title-md">Subscribe</button>
+                    </form>
+
+                    <p class="text">
+                        Get the latest updates via email. Any time you may unsubscribe
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <section class="headline">
+            <div class="container headline-container">
+                <div class="headline-left">
+                    <ul class="social-list">
+                        <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="headline-right">
+                    <div class="headline-info info-footer">
+                        <p class="text copyright">
+                            &copy; Imam Clinic 2025 | All Rights Reserved by Imam Clinic
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+
+
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up"></ion-icon>
+    </a>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const nameEl = document.querySelector("#name");
+        const emailEl = document.querySelector("#email");
+        const companyNameEl = document.querySelector("#company-name");
+        const messageEl = document.querySelector("#message");
+
+        const form = document.querySelector("#submit-form");
+
+        function checkValidations() {
+            let letters = /^[a-zA-Z\s]*$/;
+            const name = nameEl.value.trim();
+            const email = emailEl.value.trim();
+            const companyName = companyNameEl.value.trim();
+            const message = messageEl.value.trim();
+            if (name === "") {
+                document.querySelector(".name-error").classList.add("error");
+                document.querySelector(".name-error").innerText =
+                    "Please fill out this field!";
+            } else {
+                if (!letters.test(name)) {
+                    document.querySelector(".name-error").classList.add("error");
+                    document.querySelector(".name-error").innerText =
+                        "Please enter only characters!";
+                } else {
+
+                }
+            }
+            if (email === "") {
+                document.querySelector(".name-error").classList.add("error");
+                document.querySelector(".name-error").innerText =
+                    "Please fill out this field!";
+            } else {
+                if (!letters.test(name)) {
+                    document.querySelector(".name-error").classList.add("error");
+                    document.querySelector(".name-error").innerText =
+                        "Please enter only characters!";
+                } else {
+
+                }
+            }
+        }
+
+        function reset() {
+            nameEl = "";
+            emailEl = "";
+            companyNameEl = "";
+            messageEl = "";
+            document.querySelector(".name-error").innerText = "";
+        }
+
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const headline = document.getElementById('headline');
+            const offset = headline.offsetTop;
+
+            if (window.scrollY > offset) {
+                headline.classList.add('active');
+            } else {
+                headline.classList.remove('active');
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Close popup when the close button is clicked
+            document.querySelector(".close-popup--btn").addEventListener("click", function () {
+                document.querySelector(".popup-section").classList.add("hide-popup");
+            });
+        });
+    </script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

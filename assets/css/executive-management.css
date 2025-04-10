@@ -1,0 +1,149 @@
+.executive-section {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: #3D3E3F;
+}
+
+.executive-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 3px solid #ED9803;
+}
+
+.executive-details h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #3D3E3F;
+}
+
+.executive-details h3 {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #ED9803;
+}
+
+.executive-details p {
+  font-size: 14px;
+  color: #666;
+}
+
+.executive-management {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  /* padding-top: 120px; */
+  display: flex;
+}
+
+.executive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.executive img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.executive-text {
+  max-width: 500px;
+}
+
+.left {
+  order: -1;
+}
+
+.right {
+  order: 1;
+}
+
+.executive-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.executive-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.executive-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  /* Add this line */
+}
+
+/* .executive-card.left {
+  flex-direction: row;
+} */
+.executive-card.right {
+  text-align: right;
+}
+
+.executive-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.executive-content {
+  max-width: 600px;
+}
+
+.executive-name {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.executive-designation {
+  font-size: 1.8rem;
+  color: #ED9803;
+  margin-bottom: 10px;
+}
+
+.executive-message {
+  font-size: 18px;
+  color: #3D3E3F;
+}
+
+@media (max-width: 768px) {
+  .executive-card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .executive-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .executive-content {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .executive-card.right {
+    flex-direction: column-reverse !important;
+  }
+}
